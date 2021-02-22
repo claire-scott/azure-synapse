@@ -1,0 +1,22 @@
+{
+	"name": "CovidResponseData",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ric-synapse-poc-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "covid_policy_tracker.parquet",
+				"folderPath": "raw/delivery/covid/response_data",
+				"fileSystem": "ricsynapsepocfs"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

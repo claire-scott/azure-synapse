@@ -1,0 +1,62 @@
+{
+	"name": "Import Covid Stats",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "SampleSpark",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "56g",
+			"driverCores": 8,
+			"executorMemory": "56g",
+			"executorCores": 8,
+			"numExecutors": 2,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/46b10e43-83c8-486b-9589-2256e9201d9e/resourceGroups/ricdev/providers/Microsoft.Synapse/workspaces/ric-synapse-poc/bigDataPools/SampleSpark",
+				"name": "SampleSpark",
+				"type": "Spark",
+				"endpoint": "https://ric-synapse-poc.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/SampleSpark",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net"
+				},
+				"sparkVersion": "2.4",
+				"nodeCount": 3,
+				"cores": 8,
+				"memory": 56
+			}
+		},
+		"cells": [
+			{
+				"cell_type": "markdown",
+				"source": [
+					"## Import COVID Data from covid.ourworldindata.org\n",
+					"\n",
+					"This script will import the file from https://covid.ourworldindata.org/data/owid-covid-data.csv to the local ADLS\n",
+					""
+				]
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"source_address = 'https://covid.ourworldindata.org/data/owid-covid-data.csv'\n",
+					"adls_base = ''"
+				],
+				"execution_count": null
+			}
+		]
+	}
+}

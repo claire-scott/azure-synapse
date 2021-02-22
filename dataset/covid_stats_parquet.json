@@ -1,0 +1,21 @@
+{
+	"name": "covid_stats_parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ric-synapse-poc-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "raw/delivery/covid/stats",
+				"fileSystem": "ricsynapsepocfs"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}
